@@ -12,17 +12,26 @@ export const GifExpertApp = () => {
       
       setCategories([newCategory, ...categories ]);
     }
+    
+    const onDeleteCategory = () => {
+      categories.shift();
+      
+      setCategories([...categories]);
+      console.log(categories);
+    }
 
   return (
     <>
       <h1>GifExpertApp</h1>
-
-      <AddCategory 
-
-        onNewCategory = {event => onAddCategory(event)}
-      />
-
       
+      <AddCategory 
+      
+        onNewCategory = {event => onAddCategory(event)}
+        onDeleteCategory = {event => onDeleteCategory(event)}
+      />
+      <button 
+        onClick={onDeleteCategory}>X
+      </button>
     {
       categories.map( category => (
         <GifGrid 
