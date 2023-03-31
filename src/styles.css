@@ -1,6 +1,6 @@
 * {
     font-family: Helvetica, Arial, sans-serif;
-    background-color: rgb(234, 234, 234);
+    background-color: rgb(47, 120, 156);
   }
   
   body {
@@ -40,30 +40,20 @@
   }
   
   .card-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
   }
   
   .card {
-    align-content: center;
-    align-items: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
-    display: flex;
-    flex-direction: column;
-    height: 0%;  
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    overflow: hidden;
+    border: 5px solid #000000;
+    border-radius: 4px;
+    padding: .5rem;
   }
   
   .card p {
-    background-color: white;
+    background-color: rgb(47, 120, 156);
     flex: 1;
     font-size: 1.5rem;
     margin-top: 5px;
@@ -74,5 +64,6 @@
   
   .card img {
     width: 100%;
-    display: flex;
+    height: 15vw;
+    object-fit: cover;
   }
